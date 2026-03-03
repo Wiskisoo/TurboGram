@@ -1095,6 +1095,41 @@ public class LaunchActivity extends BasePermissionsActivity implements INavigati
         if (!OctoConfig.INSTANCE.usePredictiveGestures.getValue()) {
             attachBackEvent();
         }
+
+        // --- НАЧАЛО: POP-UP TURBOGRAM ПРИ ПЕРВОМ ЗАПУСКЕ ---
+        try {
+            android.content.SharedPreferences turboPrefs = getSharedPreferences("turbogram_system", android.content.Context.MODE_PRIVATE);
+            if (turboPrefs.getBoolean("is_first_launch", true)) {
+
+                // Запускаем с небольшой задержкой, чтобы интерфейс успел прогрузиться
+                org.telegram.messenger.AndroidUtilities.runOnUIThread(() -> {
+                    org.telegram.ui.ActionBar.AlertDialog.Builder builder = new org.telegram.ui.ActionBar.AlertDialog.Builder(this);
+                    builder.setTitle("⚡ Добро пожаловать в TurboGram!");
+                    builder.setMessage("Спасибо, что скачал мой мод!\n\nОбязательно подпишись на каналы, чтобы не пропустить обновления, новые фишки и новости разработки.");
+
+                    // Кнопка 1 (Новостной канал)
+                    builder.setPositiveButton("Новости", (dialog, which) -> {
+                        org.telegram.messenger.browser.Browser.openUrl(this, "https://t.me/TurboGrammod"); // <-- ВПИШИ ССЫЛКУ
+                    });
+
+                    // Кнопка 2 (Релизы)
+                    builder.setNeutralButton("Релизы", (dialog, which) -> {
+                        org.telegram.messenger.browser.Browser.openUrl(this, "https://t.me/TurboGramReleases"); // <-- ВПИШИ ССЫЛКУ
+                    });
+
+                    // Кнопка закрытия
+                    builder.setNegativeButton("Позже", (dialog, which) -> dialog.dismiss());
+
+                    builder.show();
+
+                    // Записываем, что первый запуск прошел, чтобы больше не спамить
+                    turboPrefs.edit().putBoolean("is_first_launch", false).apply();
+                }, 2000); // Задержка 2 секунды
+            }
+        } catch (Exception e) {
+            // Игнорируем ошибки, чтобы не крашнуть старт приложения
+        }
+        // --- КОНЕЦ POP-UP TURBOGRAM ---
     }
 
     private void showAttachMenuBot(TLRPC.TL_attachMenuBot attachMenuBot, String startApp, boolean sidemenu) {

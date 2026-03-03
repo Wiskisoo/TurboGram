@@ -1,6 +1,6 @@
-<img src="images/AppIcon.png" width="150" align="left"/>
+<img src="images/AppIcon.webp" width="150" align="left"/>
 
-# 🐙 OctoGram
+# 🚀 TurboGram
 *[Licensed under the GNU General Public License v2.0](https://github.com/OctoGramApp/OctoGram/blob/main/LICENSE)*
 
 [![Updates](https://img.shields.io/badge/Updates-Telegram-blue.svg)](https://t.me/octogramapp)
@@ -8,10 +8,10 @@
 ![Latest](https://img.shields.io/github/v/release/OctoGramApp/OctoGram?display_name=tag&include_prereleases)
 ![Downloads](https://img.shields.io/github/downloads/OctoGramApp/OctoGram/total)
 
-OctoGram is an open-source messaging platform that serves as an alternative to Telegram.<br></br>
-
+TurboGram is an open-source messaging platform that serves as an alternative to Telegram.<br></br>
+This mod was created for fun and to speed up Telegram, as it performed poorly on the author's weak internet connection.
 ## Compilation guide
-To reproduce the build of OctoGram, you only require the presence of ccache, which is located in the "Tools" folder. On macOs, if you have Homebrew installed, it will automatically utilize the Homebrew-installed ccache; otherwise, it will use the one located in the "Tools" folder.
+To reproduce the build of TurboGram, you only require the presence of ccache, which is located in the "Tools" folder. On macOs, if you have Homebrew installed, it will automatically utilize the Homebrew-installed ccache; otherwise, it will use the one located in the "Tools" folder.
 
 1. [**Obtain your own api_id**](https://core.telegram.org/api/obtaining_api_id) for your application and put it [**here**](https://github.com/OctoGramApp/OctoGram/blob/main/TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java).
 2. Please **do not** use the name Telegram for your app — or make sure your users understand that it is unofficial.
@@ -36,3 +36,4 @@ keyPassword=<your-keystore-password>
 - [Telegram](https://github.com/DrKLO/Telegram)
 - [Catogram X](https://github.com/CatogramX/CatogramX) for the UI toolkit (which OctoGram's one is heavily inspired by)
 - [OwlGram](https://github.com/OwlGramDev/OwlGram) for the CameraX implementation
+- [OctoGram](https://github.com/OctoGramApp/OctoGram) as a basis for our mod

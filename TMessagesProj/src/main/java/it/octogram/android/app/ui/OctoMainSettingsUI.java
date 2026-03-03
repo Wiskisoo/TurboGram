@@ -4,6 +4,7 @@
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright OctoGram, 2023-2025.
+ * Modified by TurboGram 2026.
  */
 
 package it.octogram.android.app.ui;
@@ -108,6 +109,61 @@ public class OctoMainSettingsUI implements PreferencesEntry, ChatAttachAlertDocu
                                 .description("Check update message")
                                 .build());
                     }
+                    // Читаем сохраненное состояние нашего Turbo Boost
+                    // Читаем сохраненное состояние нашего Turbo Boost
+                    // Читаем сохраненное состояние нашего Turbo Boost
+                    android.content.SharedPreferences prefs = context.getSharedPreferences("turbogramconfig", android.content.Context.MODE_PRIVATE);
+                    boolean isBoostEnabled = prefs.getBoolean("turbo_boost", false);
+
+                    // Добавляем саму кнопку в меню
+                    category.row(new TextDetailRow.TextDetailRowBuilder()
+                            .onClick(() -> {
+                                boolean currentState = prefs.getBoolean("turbo_boost", false);
+                                boolean newState = !currentState;
+                                prefs.edit().putBoolean("turbo_boost", newState).apply();
+
+                                // ВНЕДРЯЕМ TURBO BOOST ХАКОМ (НАПРЯМУЮ В ФАЙЛ НАСТРОЕК ТЕЛЕГРАМА)
+                                android.content.SharedPreferences tgPrefs = org.telegram.messenger.ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", android.content.Context.MODE_PRIVATE);
+
+                                if (newState) {
+                                    // БУСТ ВКЛЮЧЕН: Вырубаем жор трафика на уровне файла (гифки и видео не качаются)
+                                    tgPrefs.edit()
+                                            .putBoolean("autoplay_gif", false)
+                                            .putBoolean("autoplay_video", false)
+                                            .apply();
+                                } else {
+                                    // БУСТ ВЫКЛЮЧЕН: Возвращаем как было
+                                    tgPrefs.edit()
+                                            .putBoolean("autoplay_gif", true)
+                                            .putBoolean("autoplay_video", true)
+                                            .apply();
+                                }
+
+                                // Чтобы Телеграм "схавал" новые настройки, мы мгновенно перезапускаем приложение.
+                                // (Метод AppRestartHelper уже импортирован разработчиками ОктаГрама в твоем файле)
+                                it.octogram.android.utils.AppRestartHelper.triggerRebirth(context, new android.content.Intent(context, org.telegram.ui.LaunchActivity.class));
+                            })
+                            .icon(R.drawable.outline_science_white)
+                            .title("Turbo Boost \uD83D\uDD25")
+                            .description(isBoostEnabled ? "Статус: АКТИВИРОВАН (Экономия трафика)" : "Статус: ВЫКЛЮЧЕН")
+                            .build());
+
+                    // --- НАЧАЛО КРАСИВОЙ КНОПКИ СТАТИСТИКИ ---
+                    category.row(new TextIconRow.TextIconRowBuilder()
+                            .onClick(() -> fragment.presentFragment(new it.octogram.android.TurboStatsActivity()))
+                            .icon(R.drawable.msg_stats)
+                            .title("Статистика друзей \uD83D\uDCCA")
+                            .build());
+                    // --- КОНЕЦ КРАСИВОЙ КНОПКИ ---
+
+                    // --- НАЧАЛО КНОПКИ О МОДЕ ---
+                    category.row(new it.octogram.android.app.rows.impl.TextIconRow.TextIconRowBuilder()
+                            .onClick(() -> fragment.presentFragment(new it.octogram.android.TurboAboutActivity()))
+                            .icon(org.telegram.messenger.R.drawable.msg_info)
+                            .title("О моде TurboGram \uD83D\uDE80")
+                            .build());
+                    // --- КОНЕЦ КНОПКИ О МОДЕ ---
+
                     category.row(new TextIconRow.TextIconRowBuilder()
                             .onClick(() -> fragment.presentFragment(new PreferencesFragment(new OctoGeneralSettingsUI())))
                             .icon(R.drawable.msg_media)

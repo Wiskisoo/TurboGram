@@ -65,9 +65,9 @@ public class OctoConfig {
     public static final String STICKERS_PLACEHOLDER_PACK_NAME = "octo_placeholders_android";
     public static final String GITHUB_MAIN_REPO = "OctoGramApp/OctoGram";
     public static final String PRIVATE_BETA_GROUP_HASH = "61-fnrres2ExNWFk";
-    public static final String CHATS_FOLDER_SLUG = "8BWf2cqbi7lhNzE0";
-    public static final String MAIN_DOMAIN = "octogramapp.github.io";
-    public static final String MAIN_CHANNEL_TAG = "OctoGramApp";
+    public static final String CHATS_FOLDER_SLUG = "6DMVwJItZ_RhNmQy";
+    public static final String MAIN_DOMAIN = "turbogramapp.github.io";
+    public static final String MAIN_CHANNEL_TAG = "TurboGrammod";
     public static final String MAIN_CHAT_TAG = "OctoGramChat";
     public static final String AI_EXAMPLE_CHANNEL_TAG = "OctoModels";
     public static final String EXTENSION_CHANNEL_TAG = "OctoGramBeta";

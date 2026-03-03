@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.services)
     alias(libs.plugins.secrets.gradle.plugin)
+    alias(libs.plugins.kotlin.android)
 }
 
 dependencies {
@@ -108,7 +109,7 @@ android {
         variant.outputs.configureEach { output ->
             def abi = output.getFilter('ABI')
             if (abi == null) abi = 'universal'
-            outputFileName = "OctoGram-${defaultConfig.versionName}-${defaultConfig.versionCode}-${abi}.apk"
+            outputFileName = "TurboGram-${defaultConfig.versionName}-${defaultConfig.versionCode}-${abi}.apk"
             def abiVersionCode = project.ext.abiCodes.get(abi)
             if (abiVersionCode == null) abiVersionCode = 0
             output.versionCodeOverride = defaultConfig.versionCode * 10 + abiVersionCode

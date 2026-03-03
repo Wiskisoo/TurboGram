@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">OctoGram</string>
-    <string name="AppNameBeta">OctoGram Beta</string>
+    <string name="AppName">TurboGram</string>
+    <string name="AppNameBeta">TurboGram Beta</string>
     <string name="LanguageName">Українська</string>
     <string name="English">Англійська</string>
     <string name="LanguageNameInEnglish">Ukrainian</string>
@@ -276,4 +276,6 @@
     <string name="RemindTodayAt">\'Нагадати сьогодні,\' HH:mm</string>
     <string name="RemindDayAt">\'Нагадати\' d MMM\',\' HH:mm</string>
     <string name="RemindDayYearAt">\'Нагадати\' d MMM yyyy\',\' HH:mm</string>
+    <string name="OctoGramSettings">TurboGram настройки</string>
+    <string name="OctoMainSettingsHeader">Добро пожаловать в настройки TurboGram! Здесь вы можете изменить функции мода под себя</string>
 </resources>

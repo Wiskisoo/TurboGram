@@ -20,7 +20,7 @@ dependencyResolutionManagement {
         //maven { url 'https://developer.huawei.com/repo/' }
     }
 }
-rootProject.name = "OctoGram"
+rootProject.name = "TurboGram"
 include ':TMessagesProj'
 include ':TMessagesProj_App'
 //include ':TMessagesProj_AppHuawei'

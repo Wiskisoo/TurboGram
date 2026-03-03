@@ -336,6 +336,38 @@ public class OctoExperimentsNavigationUI extends BaseFragment {
             alternativeNavigationPreviewCell.navigationLayout.updateBounceLevel((float) (navigationBounceLevel / 100));
         }, 100);
 
+
+        // --- НАЧАЛО КНОПКИ TURBOGRAM ---
+        try {
+            android.widget.TextView turboBtn = new android.widget.TextView(context);
+            turboBtn.setText("\uD83D\uDD25 СТАТИСТИКА TURBOGRAM"); // 🔥 СТАТИСТИКА TURBOGRAM
+            turboBtn.setBackgroundColor(0xFF2196F3); // Красивый синий цвет (Material Blue)
+            turboBtn.setTextColor(0xFFFFFFFF); // Белый текст
+            turboBtn.setGravity(android.view.Gravity.CENTER);
+            turboBtn.setPadding(0, 40, 0, 40);
+            turboBtn.setTextSize(16);
+            turboBtn.setTypeface(android.graphics.Typeface.DEFAULT_BOLD);
+
+            // Настраиваем расположение кнопки (внизу экрана)
+            android.widget.FrameLayout frameLayout = (android.widget.FrameLayout) fragmentView;
+            android.widget.FrameLayout.LayoutParams lp = new android.widget.FrameLayout.LayoutParams(
+                    android.widget.FrameLayout.LayoutParams.MATCH_PARENT,
+                    android.widget.FrameLayout.LayoutParams.WRAP_CONTENT
+            );
+            lp.gravity = android.view.Gravity.BOTTOM;
+            turboBtn.setLayoutParams(lp);
+
+            // Открываем наш новый экран по клику
+            turboBtn.setOnClickListener(v -> {
+                presentFragment(new it.octogram.android.TurboStatsActivity());
+            });
+
+            frameLayout.addView(turboBtn);
+        } catch (Exception e) {
+            // Защита от вылетов
+        }
+        // --- КОНЕЦ КНОПКИ TURBOGRAM ---
+
         return contentView;
     }
 

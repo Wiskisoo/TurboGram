@@ -65,15 +65,15 @@
 			tools:text="Telegram Call"/>
 
 		<TextView
-			android:id="@+id/subtitle"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textSize="14dip"
-			android:textColor="#6BFFFFFF"
-			android:singleLine="true"
-			android:ellipsize="end"
-			android:gravity="left"
-			tools:text="to Account Name"/>
+				android:id="@+id/subtitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textSize="14dip"
+				android:textColor="#6BFFFFFF"
+				android:singleLine="true"
+				android:ellipsize="end"
+				android:gravity="left"
+				tools:text="to Account Name"/>
 
 	</LinearLayout>
 

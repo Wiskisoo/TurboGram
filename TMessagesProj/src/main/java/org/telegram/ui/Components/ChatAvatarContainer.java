@@ -1230,6 +1230,26 @@ public class ChatAvatarContainer extends FrameLayout implements NotificationCent
             useOnlineColor = true;
             setTypingAnimation(true);
         }
+        // --- НАЧАЛО КОДА TURBOGRAM (ЕДИНАЯ АНАЛИТИКА) ---
+        try {
+            if (parentFragment != null && parentFragment.getCurrentUser() != null) {
+                org.telegram.tgnet.TLRPC.User streakUser = parentFragment.getCurrentUser();
+                if (!streakUser.bot && !streakUser.deleted) {
+
+                    // Получаем ВСЁ одной строчкой!
+                    String analyticsText = it.octogram.android.TurboAnalytics.getAnalytics(streakUser.id, parentFragment.getCurrentAccount());
+
+                    if (analyticsText != null && !analyticsText.isEmpty()) {
+                        if (newSubtitle != null && newSubtitle.length() > 0) {
+                            newSubtitle = android.text.TextUtils.concat(newSubtitle, analyticsText);
+                        } else {
+                            newSubtitle = analyticsText.replaceFirst(" \\| ", "");
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {}
+        // --- КОНЕЦ КОДА TURBOGRAM ---
         lastSubtitleColorKey = useOnlineColor ? Theme.key_chat_status : Theme.key_actionBarDefaultSubtitle;
         if (lastSubtitle == null) {
             if (subtitleTextView != null) {

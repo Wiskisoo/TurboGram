@@ -4,6 +4,7 @@
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright OctoGram, 2023-2025.
+ * Modified by TurboGram 2026.
  */
 
 package it.octogram.android.app.ui;

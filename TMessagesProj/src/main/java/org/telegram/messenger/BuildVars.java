@@ -24,14 +24,14 @@ public class BuildVars {
     public static boolean LOGS_ENABLED = false; //BuildConfig.DEBUG_PRIVATE_VERSION;
     public static boolean FIREBASE_CRASHLYTICS_ENABLED = false;
     public static boolean DEBUG_PRIVATE_VERSION = BuildConfig.DEBUG_PRIVATE_VERSION;
-    public static boolean USE_CLOUD_STRINGS = true;
+    public static boolean USE_CLOUD_STRINGS = false;
     public static boolean CHECK_UPDATES = false;
     public static boolean NO_SCOPED_STORAGE = Build.VERSION.SDK_INT <= 29;
     public static String BUILD_VERSION_STRING = BuildConfig.BUILD_VERSION_STRING;
     public static int TELEGRAM_BUILD_VERSION = BuildConfig.TELEGRAM_BUILD_VERSION;
     public static String TELEGRAM_VERSION_STRING = BuildConfig.TELEGRAM_VERSION_STRING;
-    public static int APP_ID = 14565251;
-    public static String APP_HASH = "9952ccf3124c8fa7835d9b8e091dfb4a";
+    public static int APP_ID = 17575715;
+    public static String APP_HASH = "e01fb945b2700b1673acb165535a103e";
 
     // SafetyNet key for Google Identity SDK, set it to empty to disable
     public static String SAFETYNET_KEY = "";

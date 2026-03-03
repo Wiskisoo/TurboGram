@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">OctoGram</string>
-    <string name="AppNameBeta">OctoGram Beta</string>
+    <string name="AppName">TurboGram</string>
+    <string name="AppNameBeta">TurboGram Beta</string>
     <string name="LanguageName">English</string>
     <string name="English">English</string>
     <string name="LanguageNameInEnglish">English</string>
@@ -1691,8 +1691,8 @@
     <string name="NotificationGroupFew">%1$s sent %3$s to the group %2$s</string>
     <string name="NotificationGroupAlbum">%1$s sent an album to the group %2$s</string>
     <string name="NotificationGroupForwardedFew">%1$s forwarded %3$s to the group %2$s</string>
-    <string name="NotificationHiddenName">OctoGram</string>
-    <string name="NotificationHiddenChatName">OctoGram</string>
+    <string name="NotificationHiddenName">TurboGram</string>
+    <string name="NotificationHiddenChatName">TurboGram</string>
     <string name="NotificationHiddenChatUserName">User</string>
     <string name="NotificationHiddenMessage">New message</string>
     <string name="Reply">Reply</string>
@@ -2639,8 +2639,8 @@
     <string name="AuthAnotherClientUrl">This code can be used to allow someone to log in to your Telegram account.\n\nTo confirm Telegram login, please go to Settings &gt; Devices &gt; Scan QR and scan the code.</string>
     <string name="QRCodePermissionNoCameraWithHint">**Telegram** needs camera access so that you can scan QR codes. Tap Settings -> Permissions, and turn **Camera** on.</string>
     <string name="SetProfilePhoto">Set Profile Photo</string>
-    <string name="AppUpdate">Update OctoGram</string>
-    <string name="AppUpdateBeta">Update OctoGram Beta</string>
+    <string name="AppUpdate">Update TurboGram</string>
+    <string name="AppUpdateBeta">Update TurboGram Beta</string>
     <string name="AppUpdateVersionAndSize">Version %1$s • %2$s</string>
     <string name="AppBetaUpdateVersion">Version %1$s (%2$s)</string>
     <string name="AppUpdateDownloading">Downloading %1$d%%...</string>

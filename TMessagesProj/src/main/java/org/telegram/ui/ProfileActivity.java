@@ -13884,14 +13884,44 @@ public class ProfileActivity extends BaseFragment implements NotificationCenter.
                         aboutLinkCell.setTextAndValue(text, LocaleController.getString(R.string.DescriptionPlaceholder), ChatObject.isChannel(currentChat) && !currentChat.megagroup);
                     } else if (position == bioRow) {
                         String value;
-                        if (userInfo == null || !TextUtils.isEmpty(userInfo.about)) {
-                            value = userInfo == null ? LocaleController.getString(R.string.Loading) : userInfo.about;
+                        boolean isBioEmpty = (userInfo == null || TextUtils.isEmpty(userInfo.about));
+                        value = isBioEmpty ? (userInfo == null ? LocaleController.getString(R.string.Loading) : "") : userInfo.about;
+
+                        // --- НАЧАЛО TURBOGRAM KARMA ---
+                        try {
+                            // Твоя точная догадка: используем dialogId!
+                            long currentId = dialogId;
+
+                            // Резервная броня на случай системных сбоев
+                            if (currentId == 0 && userInfo != null && userInfo.user != null) {
+                                currentId = userInfo.user.id;
+                            }
+
+                            // Достаем карму
+                            String karma = it.octogram.android.TurboAnalytics.getKarma(currentId);
+
+                            if (karma != null && !karma.isEmpty()) {
+                                String karmaText = "Цифровая Карма: " + karma;
+
+                                if (TextUtils.isEmpty(value) || value.equals(LocaleController.getString(R.string.Loading))) {
+                                    value = karmaText;
+                                } else {
+                                    value = value + "\n\n" + karmaText;
+                                }
+                                isBioEmpty = false;
+                            }
+                        } catch (Exception e) {
+                        }
+                        // --- КОНЕЦ TURBOGRAM KARMA ---
+
+                        if (!isBioEmpty) {
                             aboutLinkCell.setTextAndValue(value, LocaleController.getString(R.string.UserBio), getUserConfig().isPremium());
-                            currentBio = userInfo != null ? userInfo.about : null;
+                            currentBio = value;
                         } else {
                             aboutLinkCell.setTextAndValue(LocaleController.getString(R.string.UserBio), LocaleController.getString(R.string.UserBioDetail), false);
                             currentBio = null;
                         }
+
                         aboutLinkCell.setMoreButtonDisabled(true);
                     }
                     break;

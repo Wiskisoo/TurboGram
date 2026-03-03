@@ -4,6 +4,7 @@
  * You should have received a copy of the license in this archive (see LICENSE).
  *
  * Copyright OctoGram, 2023-2025.
+ * modifyed by turbogram 2026.
  */
 
 package it.octogram.android.utils.updater;
@@ -293,7 +294,7 @@ public class UpdatesManager implements NotificationCenter.NotificationCenterDele
             public void run() {
                 try {
                     OctoLogging.e(TAG, "Starting to fetch updates data from server");
-                    String reqUrl = String.format(Locale.getDefault(), "https://raw.githubusercontent.com/OctoGramApp/assets/ota/version_history/history.json?ms=%d", System.currentTimeMillis());
+                    String reqUrl = String.format(Locale.getDefault(), "https://raw.githubusercontent.com/ТВОЙ_НИК/TurboGram/main/history.json?ms=%d", System.currentTimeMillis());
                     String reqResponse = new StandardHTTPRequest.Builder(reqUrl).build().request();
                     if (reqResponse == null) {
                         updatesData = null;

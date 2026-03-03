@@ -42,7 +42,7 @@
 
     <!-- Translator -->
     <string name="TranslatorHeader">Customize the integrated message translation experience</string>
-    <string name="TranslatorHeaderLong">You can customize the integrated message translation experience in OctoGram settings.</string>
+    <string name="TranslatorHeaderLong">You can customize the integrated message translation experience in TurboGram settings.</string>
     <string name="TranslatorCategoryGeneral">General</string>
     <string name="TranslatorCategoryOptions">Options</string>
     <string name="TranslatorMode">Mode</string>
@@ -54,8 +54,8 @@
     <string name="TranslatorProviderTelegramOptions">Telegram Options</string>
     <string name="TranslatorProviderTelegramDefault">Default</string>
     <string name="TranslatorProviderTelegramDevice">Device</string>
-    <string name="TranslatorProviderTelegramOptions_Desc">If enabled, the app follows Telegram\'s default translation. Telegram developers can choose to use ChatGPT, Google Translate as appropriate and this choice is in no way dependent on OctoGram. It\'s the default option and is recommended for most users.</string>
-    <string name="TranslatorProviderOctoGramOptions">OctoGram Options</string>
+    <string name="TranslatorProviderTelegramOptions_Desc">If enabled, the app follows Telegram\'s default translation. Telegram developers can choose to use ChatGPT, Google Translate as appropriate and this choice is in no way dependent on TurboGram. It\'s the default option and is recommended for most users.</string>
+    <string name="TranslatorProviderOctoGramOptions">TurboGram Options</string>
     <string name="TranslatorProviderCloudOptions">Cloud Options</string>
     <string name="TranslatorProviderSuggestedPremium">Recommended if the account has a Telegram Premium subscription.</string>
     <string name="TranslatorProviderSuggestedGeneral">It\'s the fastest provider but may resort to translation errors.</string>
@@ -294,10 +294,10 @@
 
     <!--LiteMode: sync battery saver with device-->
     <string name="LiteModeSyncBatterySaver">Sync battery saver with device</string>
-    <string name="LiteModeSyncBatterySaverInfo">You can choose to synchronize OctoGram\'s power-saving mode with your device\'s power-saving mode.</string>
+    <string name="LiteModeSyncBatterySaverInfo">You can choose to synchronize TurboGram\'s power-saving mode with your device\'s power-saving mode.</string>
 
     <!--Updates-->
-    <string name="AppUpdateCustomTitle">Update OctoGram</string>
+    <string name="AppUpdateCustomTitle">Update TurboGram</string>
     <string name="UpdatesSettingsCheck">Search for updates</string>
     <string name="UpdatesSettingsCheckButton">Check for updates</string>
     <string name="UpdatesSettingsCheckButtonDownload">Download update</string>
@@ -316,11 +316,11 @@
     <string name="UpdatesSettingsPBeta">Receive PBeta updates</string>
     <string name="UpdatesSettingsAutoDownload">Automatic download</string>
     <string name="UpdatesSettingsAutoDownloadAlways">Always</string>
-    <string name="UpdatesSettingsAutoDownloadAlwaysDesc">An OctoGram update uses approximately 80 MB. Additional costs may be charged by your phone company.</string>
+    <string name="UpdatesSettingsAutoDownloadAlwaysDesc">An TurboGram update uses approximately 80 MB. Additional costs may be charged by your phone company.</string>
     <string name="UpdatesSettingsAutoDownloadWifi">Only on Wi-Fi</string>
     <string name="UpdatesSettingsAutoDownloadNever">Never</string>
     <string name="UpdatesSettingsLinks">Other sources</string>
-    <string name="UpdatesSettingsPbetaDescription">Your main account is part of OctoGram\'s private beta program.\n\nBy activating this option, you can receive updates from the private beta program directly via OTA like other stable and beta updates, but some updates settings (like "%s") will be forcibly activated.</string>
+    <string name="UpdatesSettingsPbetaDescription">Your main account is part of TurboGram\'s private beta program.\n\nBy activating this option, you can receive updates from the private beta program directly via OTA like other stable and beta updates, but some updates settings (like "%s") will be forcibly activated.</string>
     <string name="UpdatesPbetaWarning">Please note that the update you are installing is part of the private beta program you joined and may have instabilities. If so, please report it in our official internal testing group.</string>
     <string name="UpdatesOptions">Options</string>
     <string name="UpdatesAlertSafeClose">You can close this popup during the download.</string>
@@ -362,7 +362,7 @@
     <string name="DownloadUpdate">Download</string>
     <string name="DownloadingUpdate">Downloading…</string>
 
-    <string name="OctoMainSettingsHeader">Welcome to the OctoGram Settings! Here you can customize your experience with the app</string>
+    <string name="OctoMainSettingsHeader">Welcome to the TurboGram Settings! Here you can customize your experience with the app</string>
     <string name="OctoMainSettingsInfoWorld">Discover more on the OctoGram world</string>
     <string name="OctoMainSettingsManageCategory">Manage</string>
     <string name="OctoMainSettingsChats">Chats</string>
@@ -374,8 +374,8 @@
     <string name="ContributeUsingPbeta">Contribute to the development</string>
     <string name="ContributeUsingPbeta_Desc">You can contribute to development by requesting access to our internal testing group! You will have access to all features in preview.</string>
     <string name="ContributeUsingPbeta_Desc_Already">Thank you for being part of our private beta group! You already have access to all features in preview.</string>
-    <string name="ContributeOcto">Contribute to OctoGram</string>
-    <string name="TranslateOcto">Translate OctoGram</string>
+    <string name="ContributeOcto">Contribute to TurboGram</string>
+    <string name="TranslateOcto">Translate TurboGram</string>
     <string name="CodeLicense">Project License</string>
     <string name="SourceCode">View Source Code</string>
 
@@ -613,7 +613,7 @@
     <string name="ShowUserIconsInChatsList_Desc">Show user icons in chats list near sender name in groups.</string>
     <string name="RestrictionReason">Restriction Reason</string>
     <string name="RegistrationDate">Registration Date</string>
-    <string name="OctoGramVersion">OctoGram %1$s\nBased on Telegram %2$s</string>
+    <string name="OctoGramVersion">TurboGram %1$s Based on OctoGram %2$s</string>
 
     <!--App Icon-->
     <string name="MonetIcon">Force Monet Icon</string>
@@ -779,7 +779,7 @@
 
     <!-- Privacy Policy -->
     <string name="PrivacyPolicyLogin">By continuing,\nyou agree to the *Privacy Policy*.</string>
-    <string name="OctoPrivacyPolicy">OctoGram Privacy Policy</string>
+    <string name="OctoPrivacyPolicy">TurboGram Privacy Policy</string>
 
     <string name="MKVAsVideo">Show MKV as Video</string>
     <string name="StreamAllVideos">Stream All Videos</string>
@@ -894,7 +894,7 @@
     <string name="UserRestrictionsNoSendGifs">no GIFs</string>
     <string name="UserRestrictionsNoSendGames">no games</string>
     <string name="UserRestrictionsNoSendInlineBots">no inline bots</string>
-    <string name="OctoGramSettings">OctoGram Settings</string>
+    <string name="OctoGramSettings">TurboGram Settings</string>
 
     <string name="ShowRPCErrors">Show RPC Errors</string>
     <string name="CodeFormat">Code Format</string>
@@ -969,16 +969,16 @@
 
     <!-- Sticker Size Preview -->
     <string name="StickersSizeHeader">Sticker Size</string>
-    <string name="StickersSizeChannelTitle">OctoGram Channel - News and tips for your client</string>
-    <string name="StickersSizeChannelTitleMini">OctoGram Channel</string>
+    <string name="StickersSizeChannelTitle">TurboGram Channel - News and tips for your client</string>
+    <string name="StickersSizeChannelTitleMini">TurboGram Channel</string>
 
-    <string name="StickerSizePreviewMessage1">Oh, I love OctoGram 🐙! I just learned today that it\'s Italian, how cool!</string>
+    <string name="StickerSizePreviewMessage1">Oh, I love TurboGram 🐙! I just learned today that it\'s Italian, how cool!</string>
     <string name="StickerSizePreviewMessage2">In Italy, they say the pizza 🍕 is really good… When are we going?</string>
 
-    <string name="StickerSizePreviewMessage3">New OctoGram update just dropped!</string>
+    <string name="StickerSizePreviewMessage3">New TurboGram update just dropped!</string>
     <string name="StickerSizePreviewMessage4">Neat!</string>
 
-    <string name="StickerSizePreviewMessage5">I love the new OctoGram update!</string>
+    <string name="StickerSizePreviewMessage5">I love the new TurboGram update!</string>
     <string name="StickerSizePreviewMessage6">Cool! I\'m going to try it out now!</string>
 
     <!-- Sticker Shape -->
@@ -1129,7 +1129,7 @@
     <!-- App Link Verification -->
     <string name="DontAskAgain">Don\'t ask again</string>
     <string name="AppLinkNotVerifiedTitle">App links not verified</string>
-    <string name="AppLinkNotVerifiedMessage">For Android 12 and newer, you need to manually add link to verified links in order to open t.me links in OctoGram.</string>
+    <string name="AppLinkNotVerifiedMessage">For Android 12 and newer, you need to manually add link to verified links in order to open t.me links in TurboGram.</string>
     <string name="MaxDragAndDropFileCount">You cannot add more than %s photos/video!</string>
 
     <string name="OnDeviceTranslationModels">On-device models</string>

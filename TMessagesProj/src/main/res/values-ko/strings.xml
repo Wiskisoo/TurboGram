@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">OctoGram</string>
-    <string name="AppNameBeta">OctoGram Beta</string>
+    <string name="AppName">TurboGram</string>
+    <string name="AppNameBeta">TurboGram Beta</string>
     <string name="LanguageName">한국어</string>
     <string name="English">영어</string>
     <string name="LanguageNameInEnglish">한국어</string>
