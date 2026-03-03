@@ -30,8 +30,8 @@ public class BuildVars {
     public static String BUILD_VERSION_STRING = BuildConfig.BUILD_VERSION_STRING;
     public static int TELEGRAM_BUILD_VERSION = BuildConfig.TELEGRAM_BUILD_VERSION;
     public static String TELEGRAM_VERSION_STRING = BuildConfig.TELEGRAM_VERSION_STRING;
-    public static int APP_ID = 17575715;
-    public static String APP_HASH = "e01fb945b2700b1673acb165535a103e";
+    public static int APP_ID = 1234567;
+    public static String APP_HASH = "your_api_hash";
 
     // SafetyNet key for Google Identity SDK, set it to empty to disable
     public static String SAFETYNET_KEY = "";
