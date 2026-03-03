@@ -14,7 +14,7 @@ The mod adds turbo boost, gamification, conversation streaks, and detailed chat 
 ## Compilation guide
 To reproduce the build of TurboGram, you only require the presence of ccache, which is located in the "Tools" folder. On macOs, if you have Homebrew installed, it will automatically utilize the Homebrew-installed ccache; otherwise, it will use the one located in the "Tools" folder.
 
-1. [**Obtain your own api_id**](https://core.telegram.org/api/obtaining_api_id) for your application and put it [**here**](https://github.com/OctoGramApp/OctoGram/blob/main/TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java).
+1. [**Obtain your own api_id**](https://core.telegram.org/api/obtaining_api_id) for your application and put it [**here**](https://github.com/Wiskisoo/TurboGram/blob/main/TMessagesProj/src/main/java/org/telegram/messenger/BuildVars.java).
 2. Please **do not** use the name Telegram for your app — or make sure your users understand that it is unofficial.
 3. Kindly **do not** use our standard logo (white paper plane in a blue circle) as your app's logo.
 4. Please study our [**security guidelines**](https://core.telegram.org/mtproto/security_guidelines) and take good care of your users' data and privacy.
