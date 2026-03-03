@@ -10,6 +10,7 @@
 
 TurboGram is an open-source messaging platform that serves as an alternative to Telegram.<br></br>
 This mod was created for fun and to speed up Telegram, as it performed poorly on the author's weak internet connection.
+The mod adds turbo boost, gamification, conversation streaks, and detailed chat statistics.
 ## Compilation guide
 To reproduce the build of TurboGram, you only require the presence of ccache, which is located in the "Tools" folder. On macOs, if you have Homebrew installed, it will automatically utilize the Homebrew-installed ccache; otherwise, it will use the one located in the "Tools" folder.
 
